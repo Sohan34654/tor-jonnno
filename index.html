@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Talking Button 😜</title>
+  <style>
+    body {
+      font-family: 'Comic Sans MS', cursive;
+      background: #ffe4e1;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      margin: 0;
+    }
+    h1 {
+      color: #ff1493;
+    }
+    button {
+      padding: 15px 30px;
+      font-size: 20px;
+      border: none;
+      border-radius: 12px;
+      background-color: #ff69b4;
+      color: white;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+    button:hover {
+      background-color: #ff1493;
+    }
+    .talk {
+      margin-top: 20px;
+      font-size: 24px;
+      color: #333;
+      text-align: center;
+      max-width: 400px;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Kiss me😜!</h1>
+  <button onclick="saySomething()">😎 Click Me</button>
+  <div class="talk" id="talk"></div>
+
+  <script>
+    const lines = [
+      "Tui joss bkcda  re bhai!",
+      "Matha noshto tor! 🤯",
+      "Ajke ar porish na, biriyani kha! 🍛",
+      "Tumi ekta gab 😜",
+      "Vai... ei duniya onek boro!",
+      "Engineering = Endless suffering 😩",
+      "Jokhon porashuna thake na, shanti thake!",
+      "😵",
+      "Tumi kare valobasho? ❤️",
+      "Tomar crush kida?",
+      "Ami kintu jani tumi kare valobasho😈",
+      "Lukaiye thak bkcda",
+      "KUET a asis nah",
+	  "Tore cdi",
+	  "KUET Cdi",
+	  "tor bici nei bibio nei",
+    ];
+
+    function saySomething() {
+      const random = Math.floor(Math.random() * lines.length);
+      document.getElementById('talk').textContent = lines[random];
+    }
+  </script>
+
+</body>
+</html>
